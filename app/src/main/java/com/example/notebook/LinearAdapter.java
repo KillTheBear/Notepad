@@ -41,8 +41,8 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearList
         private TextView mContext,mTime;
         public LinearList(@NonNull View itemView) {
             super(itemView);
-            mContext= mContext.findViewById(R.id.tv_noteContent);
-            mTime =mTime.findViewById(R.id.tv_noteTime);
+            mContext= itemView.findViewById(R.id.tv_noteContent);
+            mTime =itemView.findViewById(R.id.tv_noteTime);
 
         }
     }

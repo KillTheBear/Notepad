@@ -5,11 +5,13 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     >
+    <!--android:fillViewport="true"属性让scrollView沾满全屏-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         >
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -22,14 +24,14 @@
                 android:layout_height="wrap_content"
                 android:hint="标题"
                 android:background="@null"
+                android:focusableInTouchMode="false"
                 />
             <EditText
                 android:id="@+id/et_context"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@null"
                 />
-
         </LinearLayout>
     </ScrollView>
 

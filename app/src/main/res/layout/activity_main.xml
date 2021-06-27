@@ -5,8 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <include layout="@layout/theme_title"/>
-    <include layout="@layout/main_fragment"/>
+    <include layout="@layout/theme_title"
+        android:id="@+id/ll_title"
+        />
+    <include layout="@layout/activity_notelist"
+        android:id="@+id/rcv_list"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/ll_title"
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"

@@ -2,6 +2,8 @@ package com.example.notebook;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,19 +14,17 @@ import com.example.notebook.addNote.EditContextActivity;
 import com.example.notepad.R;
 
 public class MainActivity extends AppCompatActivity {
-    private  Fragment mFragment;
     private ImageButton mIb_AddNote;
+    private RecyclerView mRcv_List;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
         mIb_AddNote = findViewById(R.id.floatingActionButton);
-        if(mFragment == null){
-            mFragment = new FragmentNoteUI();
-            getSupportFragmentManager().beginTransaction().add(R.id.fl_mainUI,mFragment).commitAllowingStateLoss();
-
-        }
+        mRcv_List = findViewById(R.id.rcv_list);
+        mRcv_List.setLayoutManager(new LinearLayoutManager(this));
+        mRcv_List.setAdapter(new LinearAdapter(this));
         setListener();
 
     }
