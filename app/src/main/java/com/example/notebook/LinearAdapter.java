@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.notepad.R;
 
-/*public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearList> {
+public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearList> {
     private Context mContextView;
     LinearList linearList;
     public  LinearAdapter(Context context){
@@ -46,4 +46,4 @@ import com.example.notepad.R;
 
         }
     }
-}*/
+}
