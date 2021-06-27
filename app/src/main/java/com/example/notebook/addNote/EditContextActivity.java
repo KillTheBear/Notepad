@@ -2,6 +2,7 @@ package com.example.notebook.addNote;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -14,6 +15,7 @@ import com.example.notepad.R;
 public class EditContextActivity extends AppCompatActivity {
     private EditText mTitle, mContext;
 
+    @SuppressLint({"CutPasteId", "ClickableViewAccessibility"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
