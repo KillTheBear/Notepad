@@ -11,11 +11,11 @@ public class NoteDatabaseSql extends SQLiteOpenHelper {
         super(context, name, factory, version);
     }
     /*
-    * 建立笔记本数据库
-    * noteID : 笔记编号
-    * noteContext : 笔记内容
-    * noteTag : 笔记标签
-    * noteTime : 笔记时间
+    * 建立便签数据库
+    * noteID : 便签编号
+    * noteContext : 便签内容
+    * noteTag : 便签标签
+    * noteTime : 便签时间
     * */
     private  String noteContext ="create table note(" +
             "noteID integer primary key autoincrement,"  +
@@ -33,9 +33,9 @@ public class NoteDatabaseSql extends SQLiteOpenHelper {
         if(oldVersion <=1){
             db.execSQL(noteContext);
         }
-        else if(oldVersion <= 2){
+        /*else if(oldVersion <= 2){
 
-        }
+        }*/
 
     }
 }
